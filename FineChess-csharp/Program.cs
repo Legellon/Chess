@@ -13,6 +13,18 @@ namespace FineChess_csharp
         }
 
 
+        public enum Letters
+        {
+            A, B, C, D, E, F, G, H
+        }
+
+
+        public enum Numbers
+        {
+            Number_1, Number_2, Number_3, Number_4, Number_5, Number_6, Number_7, Number_8
+        }
+
+
         public enum Cells
         {
             a1, b1, c1, d1, e1, f1, g1, h1,
@@ -27,6 +39,12 @@ namespace FineChess_csharp
         }
 
 
+        public enum Pieces
+        {
+            Pawn, Rookie, Knight, Bishop, Queen, King, Empty
+        }
+
+
         public enum Ways
         {
             Horizontal, Vertical, Diagonal
@@ -35,69 +53,93 @@ namespace FineChess_csharp
 
         public abstract class Piece
         {
-            public enum Types
-            {
-                Pawn, Rookie, Knight, Bishop, Queen, King, Empty
-            }
-
-            public abstract Types Type { get; }
-
-            public bool IsNotEmpty => Type != Types.Empty;
+            public static readonly Pieces Empty = Pieces.Empty;
         }
 
 
         public sealed class Pawn : Piece
         {
-            public override Types Type => Types.Pawn;
             public Sides Side { get; }
 
             public Pawn(Sides side)
-            {
-                Side = side;
-            }
-        }
-
-
-        public sealed class Empty : Piece
-        {
-            public override Types Type => Types.Empty;
+                => Side = side;
         }
 
 
         public readonly struct Cell
         {
+            #region static attributes & methods
             public static readonly string[] CellPositionStrings;
 
             public static readonly Cell Empty = new(Cells.Empty);
 
             static Cell()
                 => CellPositionStrings = Enum.GetNames(typeof(Cells));
+            #endregion
 
-            public Cell(int numberOfCell)
-                => Value = (Cells)numberOfCell;
-            public static implicit operator Cell(int numberOfCell)
-                => new(numberOfCell);
+            #region constructors & default implictors
+            public Cell(int numOfCell)
+                => Value = (Cells)numOfCell;
 
-            public Cell(Cells cell)
-                => Value = cell;
-            public static implicit operator Cell(Cells cell)
-                => new(cell);
+            public static implicit operator Cell(int numOfCell)
+                => new(numOfCell);
+
+            public Cell(Cells enumOfCell)
+                => Value = enumOfCell;
+
+            public static implicit operator Cell(Cells enumOfCell)
+                => new(enumOfCell);
 
             public Cell(Cell cell)
                 => Value = cell.Value;
+            #endregion
 
+            #region object attributes & methods
             public readonly Cells Value;
+
+            public int AsInt()
+                => (int)Value;
+            #endregion
+
+            #region implictors of default operators
+            #endregion
         }
 
 
         public readonly struct Letter
         {
+            #region static attributes & methods
             private static readonly char[] LetterChars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' };
 
             private static readonly string[] LetterStrings;
 
             static Letter()
                 => LetterStrings = LetterChars.Select(ch => ch.ToString()).ToArray();
+            #endregion
+
+            #region constructors & default implictors
+            public Letter(int numOfLetter)
+                => Value = (Letters)numOfLetter;
+
+            public static implicit operator Letter(int numOfLetter)
+                => new(numOfLetter);
+
+            public Letter(Letters enumOfLetter)
+                => Value = enumOfLetter;
+
+            public static implicit operator Letter(Letters enumOfLetter)
+                => new(enumOfLetter);
+
+            public Letter(Letter letter)
+                => Value = letter.Value;
+            #endregion
+
+            #region object attributes & methods
+            public readonly Letters Value;
+            #endregion
+
+            #region implictors of default operators
+            #endregion
         }
 
 
@@ -109,15 +151,12 @@ namespace FineChess_csharp
         static void Main(string[] args)
         {
             Pawn piece = new(Sides.White);
-            Console.WriteLine("{0} {1}", piece.Side, piece.Type);
 
             Cell c1 = new(0);
             Cell c2 = new(1);
 
             Console.WriteLine(c1.Value);
-
             Console.WriteLine(Cell.CellPositionStrings.Contains("a1"));
-
             Console.WriteLine(10 & 7);
 
             Console.ReadKey();
