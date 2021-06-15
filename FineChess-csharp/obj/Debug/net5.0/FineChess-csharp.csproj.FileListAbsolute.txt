@@ -1,0 +1,15 @@
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/bin/Debug/net5.0/FineChess-csharp.deps.json
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/bin/Debug/net5.0/FineChess-csharp.runtimeconfig.json
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/bin/Debug/net5.0/FineChess-csharp.runtimeconfig.dev.json
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/bin/Debug/net5.0/FineChess-csharp.dll
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/bin/Debug/net5.0/ref/FineChess-csharp.dll
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/bin/Debug/net5.0/FineChess-csharp.pdb
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.csprojAssemblyReference.cache
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.AssemblyInfoInputs.cache
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.AssemblyInfo.cs
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.csproj.CoreCompileInputs.cache
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.dll
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/ref/FineChess-csharp.dll
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.pdb
+/Users/nikitarehemae/Projects/FineChess-csharp/FineChess-csharp/obj/Debug/net5.0/FineChess-csharp.genruntimeconfig.cache

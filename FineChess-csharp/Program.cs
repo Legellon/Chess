@@ -118,6 +118,8 @@ namespace FineChess_csharp
 
             Console.WriteLine(Cell.CellPositionStrings.Contains("a1"));
 
+            Console.WriteLine(10 & 7);
+
             Console.ReadKey();
         }
     }
